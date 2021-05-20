@@ -142,7 +142,7 @@ public class LectureSession implements Initializable {
     }
 
 
-
+//
     private List<String> getSubjectGroupSessions() {
 
         List<String> options4 = new ArrayList<>();
