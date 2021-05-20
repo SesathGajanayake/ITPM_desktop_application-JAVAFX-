@@ -277,6 +277,17 @@ public class LecturesDetailsController implements Initializable {
 
     }
 
+    @FXML
+    void clear(ActionEvent event) {
 
+        lecnameChoice.setText(" ");
+        empidChoice.setText(" ");
+        facultyChoice.setText(" ");
+        departmentChoice.setText(" ");
+        buildingChoice.setText(" ");
+        levelChoice.setText(" ");
+        rankChoice.setText(" ");
+        centerChoice.setText(" ");
 
+    }
 }

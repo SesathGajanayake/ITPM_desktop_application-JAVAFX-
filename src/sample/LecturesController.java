@@ -201,6 +201,21 @@ public class LecturesController implements Initializable{
         }
     }
 
+
+    @FXML
+    void clear(ActionEvent event) {
+
+        faculty.setItems(null);
+        department.setItems(null);
+        center.setItems(null);
+        building.setItems(null);
+        level.setItems(null);
+        empId.setText(" ");
+        rankGenerate.setText(" ");
+        lecName1.setText(" ");
+
+    }
+
 }
 
 

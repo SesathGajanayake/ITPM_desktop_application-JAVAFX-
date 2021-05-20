@@ -281,6 +281,21 @@ public class SubjectDetailsController implements Initializable {
 
     }
 
+    @FXML
+    void clear(ActionEvent event) {
+
+        idChoice.setText(" ");
+        subjectnameChoice.setText(" ");
+        subjectcodeChoice.setText(" ");
+        offerdyearChoice.setText(" ");
+        offerdsemesterChoice.setText(" ");
+        numoflecChoice.setText(" ");
+        numoflabChoice.setText(" ");
+        numofevaluationChoice.setText(" ");
+        numoftutehrsChoice.setText(" ");
+
+    }
+
 
 }
 

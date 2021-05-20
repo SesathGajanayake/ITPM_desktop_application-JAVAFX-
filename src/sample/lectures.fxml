@@ -26,8 +26,8 @@
 <!--      <ChoiceBox fx:id="myChoicebox2" layoutX="480.0" layoutY="120.0" prefWidth="150.0" />-->
 <!--      <ChoiceBox fx:id="myChoicebox3" layoutX="480.0" layoutY="170.0" prefWidth="150.0" />-->
       <TextField fx:id="rankGenerate" layoutX="468.0" layoutY="222.0" />
-      <Button layoutX="453.0" layoutY="427.0" mnemonicParsing="false" onAction="#save" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: #64FFDA;" text="Save" />
-      <Button layoutX="322.0" layoutY="427.0" mnemonicParsing="false" onAction="#generateRank" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #FF7043;" text="Generate rank" />
+      <Button layoutX="544.0" layoutY="427.0" mnemonicParsing="false" onAction="#save" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #64FFDA;" text="Save" />
+      <Button layoutX="322.0" layoutY="427.0" mnemonicParsing="false" onAction="#generateRank" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: #FF7043;" text="Generate rank" />
       <TextField fx:id="lecName1" layoutX="172.0" layoutY="130.0" />
       <Text layoutX="63.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Center" />
       <ComboBox fx:id="faculty" layoutX="171.0" layoutY="222.0" prefWidth="150.0" />
@@ -35,5 +35,6 @@
       <ComboBox fx:id="center" layoutX="172.0" layoutY="328.0" prefWidth="150.0" />
       <ComboBox fx:id="building" layoutX="467.0" layoutY="120.0" prefWidth="150.0" />
       <ComboBox fx:id="level" layoutX="467.0" layoutY="173.0" prefWidth="150.0" />
+      <Button layoutX="458.0" layoutY="427.0" mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #0C9EE9;" text="Clear" />
    </children>
 </AnchorPane>

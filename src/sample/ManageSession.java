@@ -2,6 +2,8 @@ package sample;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -52,9 +54,11 @@ public class ManageSession implements Initializable {
     @FXML
     private Button addSessionBtn;
 
-
     @FXML
     private Button manageSessionDeleteBtn;
+
+    @FXML
+    private Button searchbtn;
 
     @FXML
     private TextField idTxt;
@@ -79,6 +83,10 @@ public class ManageSession implements Initializable {
 
     @FXML
     private TextField tagsTxt;
+
+    @FXML
+    private TextField searchbar;
+
 
     @FXML
     void addsessionbtnaction(ActionEvent event) {
@@ -216,9 +224,45 @@ public class ManageSession implements Initializable {
 
         showSession();
         RefreshSessionTable();
+
+//Search function starting method here
+        FilteredList<Session> filteredData = new FilteredList<>(getsessionlist(),b-> true);
+
+        searchbar.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(session -> {
+
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if (session.getLecturename().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true;
+                } else if (session.getSubjectname().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true; // Filter matches last name.
+                } else if (session.getSubjectcode().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true;
+                } else if (session.getGroupID().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true;
+                } else if (session.getTags().toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true;
+                } else if (String.valueOf(session.getNumofStudents()).toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true;
+                } else if (String.valueOf(session.getDuration()).toLowerCase().indexOf(lowerCaseFilter) != -1) {
+                    return true;
+                } else
+                    return false;
+
+            });
+        });
+
+        SortedList<Session> sortedData = new SortedList<>(filteredData);
+        sortedData.comparatorProperty().bind(managesessionTable.comparatorProperty());
+
+        managesessionTable.setItems(sortedData);
+
     }
-
-
 
 
     public Connection getConnection() {

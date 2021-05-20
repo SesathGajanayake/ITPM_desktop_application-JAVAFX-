@@ -26,7 +26,7 @@
       <Text layoutX="366.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Evaluation hours " />
       <TextField fx:id="subjectnameChoice" layoutX="159.0" layoutY="227.0" />
       <TextField fx:id="subjectcodeChoice" layoutX="158.0" layoutY="273.0" />
-      <Button layoutX="586.0" layoutY="383.0" mnemonicParsing="false" onAction="#save" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #64FFDA;" text="Save" />
+      <Button layoutX="575.0" layoutY="382.0" mnemonicParsing="false" onAction="#save" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #64FFDA;" text="Save" />
       <TextField fx:id="notuteChoice" layoutX="532.0" layoutY="119.0" />
       <TextField fx:id="nolecChoice" layoutX="533.0" layoutY="174.0" />
       <TextField fx:id="nolabChoice" layoutX="533.0" layoutY="227.0" />
@@ -38,5 +38,6 @@
          </toggleGroup>
       </RadioButton>
       <RadioButton fx:id="semTwo" layoutX="251.0" layoutY="178.0" mnemonicParsing="false" onAction="#radioSelect" text="2nd sem" toggleGroup="$semester" />
+      <Button layoutX="478.0" layoutY="382.0" mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: #0C9EE9;" text="Clear" />
    </children>
 </AnchorPane>
