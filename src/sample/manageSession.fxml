@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="676.0" prefWidth="843.0" style="-fx-background-color: #DAF7A6;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ManageSession">
+   <children>
+      <TableView fx:id="managesessionTable" layoutX="12.0" layoutY="211.0" onMouseClicked="#tableSelect" prefHeight="155.0" prefWidth="818.0">
+        <columns>
+          <TableColumn fx:id="managedtableIDtable" prefWidth="60.799957275390625" text="ID" />
+          <TableColumn fx:id="lecturenameTable" prefWidth="124.79998779296875" text="Lecture name " />
+            <TableColumn fx:id="subjectcodeIDtable" prefWidth="117.59999084472656" text="Subject Code" />
+            <TableColumn fx:id="subjectnameTable" prefWidth="118.4000244140625" text="Subject name" />
+            <TableColumn fx:id="groupidTable" prefWidth="98.39996337890625" text="Group ID" />
+            <TableColumn fx:id="tagsTable" prefWidth="76.800048828125" text="Tags" />
+            <TableColumn fx:id="noOfstudentsTable" prefWidth="124.0" text="Number of Students" />
+            <TableColumn fx:id="durationTable" prefWidth="101.60001220703123" text="Duration" />
+        </columns>
+      </TableView>
+      <TextField layoutX="58.0" layoutY="107.0" prefHeight="26.0" prefWidth="215.0" />
+      <Text layoutX="58.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage sessions" wrappingWidth="167.19996337890598">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <ComboBox layoutX="295.0" layoutY="107.0" prefWidth="150.0" />
+      <Button layoutX="482.0" layoutY="107.0" mnemonicParsing="false" text="Search" />
+      <Button fx:id="addSessionBtn" layoutX="604.0" layoutY="105.0" mnemonicParsing="false" onAction="#addsessionbtnaction" prefHeight="30.0" prefWidth="198.0" style="-fx-background-color: #0CDA4F;" text="Add session">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="manageSessionUpdateBtn" layoutX="594.0" layoutY="159.0" mnemonicParsing="false" onAction="#update" prefHeight="26.0" prefWidth="109.0" style="-fx-background-color: #EC407A;" text="Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="manageSessionDeleteBtn" layoutX="735.0" layoutY="159.0" mnemonicParsing="false" onAction="#delete" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #FDD835;" text="Delete">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TextField fx:id="lecturenameTxt" layoutX="181.0" layoutY="460.0" />
+      <TextField fx:id="subjectnameTxt" layoutX="180.0" layoutY="571.0" />
+      <TextField fx:id="subjectcodeTxt" layoutX="181.0" layoutY="513.0" />
+      <TextField fx:id="durationTxt" layoutX="615.0" layoutY="573.0" />
+      <TextField fx:id="numofstudentTxt" layoutX="615.0" layoutY="513.0" />
+      <TextField fx:id="tagsTxt" layoutX="613.0" layoutY="460.0" />
+      <Text layoutX="42.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecture name" wrappingWidth="99.73672485351562">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="43.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject Code" wrappingWidth="99.73672485351562">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="45.0" layoutY="588.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject Name" wrappingWidth="99.73672485351562">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="432.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tags" wrappingWidth="99.73672485351562">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="432.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Students" wrappingWidth="118.93679809570312">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="435.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" wrappingWidth="109.33676147460938">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <TextField fx:id="groupidTxt" layoutX="612.0" layoutY="401.0" />
+      <Text layoutX="432.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group ID" wrappingWidth="99.73672485351562">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="45.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="99.73672485351562">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <TextField fx:id="idTxt" layoutX="181.0" layoutY="403.0" />
+   </children>
+</AnchorPane>

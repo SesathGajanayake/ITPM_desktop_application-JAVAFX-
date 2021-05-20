@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="624.0" prefWidth="711.0" style="-fx-background-color: #DAF7A6;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LectureSession">
+   <children>
+      <Text layoutX="61.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add session" wrappingWidth="117.83944702148438">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="83.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step 1" wrappingWidth="73.83944702148438">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="sessionLec" layoutX="179.0" layoutY="172.0" onMouseClicked="#getselectLecName" prefWidth="150.0" />
+      <Text layoutX="52.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select lecture(s)" wrappingWidth="104.23947143554688">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="372.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Tags" wrappingWidth="104.23947143554688">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="sessionTags" layoutX="476.0" layoutY="173.0" onMouseClicked="#getselectTags" prefWidth="150.0" />
+      <Text layoutX="51.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select lecture" wrappingWidth="104.23947143554688">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="sessionSelectLec" layoutX="180.0" layoutY="228.0" />
+      <Button layoutX="420.0" layoutY="566.0" mnemonicParsing="false" onAction="#nextbtnSave" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #0CE9A5;" text="Submit" />
+      <Button fx:id="clearbtn" layoutX="551.0" layoutY="566.0" mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: #0C9EE9;" text="Clear" />
+      <Text layoutX="372.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select tags" wrappingWidth="81.03945922851562">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="sessionSelectTags" layoutX="477.0" layoutY="229.0" />
+      <Text layoutX="83.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Step 2" wrappingWidth="73.83944702148438">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="52.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select group" wrappingWidth="104.23947143554688">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="360.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No of studetns" wrappingWidth="104.23947143554688">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="52.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select code" wrappingWidth="104.23947143554688">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="52.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select subjects" wrappingWidth="104.23947143554688">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="sessionGroup" layoutX="171.0" layoutY="366.0" onMouseClicked="#getselectLecName" prefWidth="150.0" />
+      <ComboBox fx:id="sessionSubjects" layoutX="171.0" layoutY="419.0" onMouseClicked="#getselectLecName" prefWidth="150.0" />
+      <ComboBox fx:id="sessionCode" layoutX="171.0" layoutY="476.0" onMouseClicked="#getselectTags" prefWidth="150.0" />
+      <TextField fx:id="numOfStudentText" layoutX="492.0" layoutY="366.0" />
+      <TextField fx:id="durationText" layoutX="492.0" layoutY="419.0" />
+      <Text layoutX="360.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Durations" wrappingWidth="104.23947143554688">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="654.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="hrs " wrappingWidth="30.639495849609375">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

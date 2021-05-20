@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="599.0" prefWidth="854.0" style="-fx-background-color: #DAF7A6;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LecturesDetailsController">
+   <children>
+      <TableView fx:id="managingTableLec" layoutX="50.0" layoutY="121.0" onMouseClicked="#getSelected" prefHeight="250.0" prefWidth="678.0">
+        <columns>
+          <TableColumn fx:id="empidTable" prefWidth="63.200016021728516" text="Emp.ID" />
+          <TableColumn fx:id="lecnameTable" prefWidth="116.00003051757812" text="Lecture name" />
+            <TableColumn fx:id="facultyTable" prefWidth="90.39997863769531" text="Faculty" />
+            <TableColumn fx:id="departmentTable" prefWidth="84.0" text="Department" />
+            <TableColumn fx:id="centerTable" prefWidth="92.79998779296875" text="Center" />
+            <TableColumn fx:id="buildingTable" prefWidth="75.20001220703125" text="Building" />
+            <TableColumn fx:id="levelTable" prefWidth="75.20001220703125" text="Level" />
+            <TableColumn fx:id="rankTable" prefWidth="75.20001220703125" text="Rank" />
+        </columns>
+      </TableView>
+      <Text layoutX="50.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Managing lectures ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="updateMange" layoutX="744.0" layoutY="222.0" mnemonicParsing="false" onAction="#updatebutton" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #EC407A;" text="Update" />
+      <Button fx:id="deleteMange" layoutX="744.0" layoutY="162.0" mnemonicParsing="false" onAction="#deletebutton" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #FDD835;" text="Delete" />
+      <Text layoutX="65.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecture name" wrappingWidth="87.20001220703125" />
+      <Text layoutX="65.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee ID" />
+      <Text layoutX="65.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Faculty" />
+<!--      <ChoiceBox fx:id="facultyChoice" layoutX="176.0" layoutY="484.0" prefWidth="150.0" />-->
+      <TextField fx:id="lecnameChoice" layoutX="177.0" layoutY="397.0" />
+      <TextField fx:id="empidChoice" layoutX="177.0" layoutY="441.0" />
+      <Text layoutX="65.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department" />
+<!--      <ChoiceBox fx:id="BuildingChoice4" layoutX="558.0" layoutY="441.0" prefWidth="150.0" />-->
+      <Text layoutX="414.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level" />
+      <TextField fx:id="facultyChoice" layoutX="177.0" layoutY="493.0" />
+      <TextField fx:id="departmentChoice" layoutX="177.0" layoutY="535.0" />
+      <TextField fx:id="buildingChoice" layoutX="529.0" layoutY="441.0" />
+      <Text layoutX="413.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Center" wrappingWidth="87.20001220703125" />
+      <Text layoutX="414.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Building" wrappingWidth="63.556640625" />
+      <TextField fx:id="levelChoice" layoutX="529.0" layoutY="496.0" />
+      <Text layoutX="414.0" layoutY="552.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rank" />
+      <TextField fx:id="rankChoice" layoutX="529.0" layoutY="535.0" />
+      <TextField fx:id="centerChoice" layoutX="529.0" layoutY="398.0" />
+   </children>
+</AnchorPane>
