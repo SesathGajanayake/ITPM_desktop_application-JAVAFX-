@@ -6,13 +6,18 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
@@ -306,19 +311,27 @@ public class LectureSession implements Initializable {
     @FXML
     void clear(ActionEvent event) {
 
-        sessionLec.setItems(null);
-        sessionSubjects.setItems(null);
-        sessionCode.setItems(null);
-        sessionGroup.setItems(null);
-        sessionTags.setItems(null);
+//        sessionLec.setItems(null);
+//        sessionSubjects.setItems(null);
+//        sessionCode.setItems(null);
+//        sessionGroup.setItems(null);
+//        sessionTags.setItems(null);
         numOfStudentText.setText(" ");
         durationText.setText(" ");
         sessionSelectTags.setText(" ");
         sessionSelectLec.setText(" ");
     }
 
+    @FXML
+    void next(ActionEvent event) throws IOException {
 
-
-
+        Parent root = FXMLLoader.load(getClass().getResource("manageSession.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
     }
+
+
+}
 

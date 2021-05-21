@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
@@ -92,18 +93,18 @@ public class SubjectsController implements Initializable {
 
         }
 
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("subjectDetails.fxml"));
-
-            Scene scene = new Scene(root);
-            Stage stage =new Stage();
-            stage.setScene(scene);
-            stage.show();
-
-
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Parent root = FXMLLoader.load(getClass().getResource("subjectDetails.fxml"));
+//
+//            Scene scene = new Scene(root);
+//            Stage stage =new Stage();
+//            stage.setScene(scene);
+//            stage.show();
+//
+//
+//        } catch(Exception e) {
+//            e.printStackTrace();
+//        }
 
 
 
@@ -184,7 +185,7 @@ public class SubjectsController implements Initializable {
     void clear(ActionEvent event) {
 
 
-        offerdYearchoice.setItems(null);
+//        offerdYearchoice.setItems(null);
         subjectnameChoice.setText(" ");
         subjectcodeChoice.setText(" ");
         notuteChoice.setText(" ");
@@ -194,6 +195,20 @@ public class SubjectsController implements Initializable {
         nolabChoice.setText(" ");
 
     }
+
+    @FXML
+    void next(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("subjectDetails.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage =new Stage();
+        stage.setScene(scene);
+        stage.show();
+
+
+
+    }
+
 
 
 }

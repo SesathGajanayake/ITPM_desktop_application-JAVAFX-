@@ -58,9 +58,6 @@ public class ManageSession implements Initializable {
     private Button manageSessionDeleteBtn;
 
     @FXML
-    private Button searchbtn;
-
-    @FXML
     private TextField idTxt;
 
     @FXML

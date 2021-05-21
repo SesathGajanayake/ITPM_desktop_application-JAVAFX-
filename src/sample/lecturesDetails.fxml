@@ -48,5 +48,6 @@
       <TextField fx:id="rankChoice" layoutX="529.0" layoutY="535.0" />
       <TextField fx:id="centerChoice" layoutX="529.0" layoutY="398.0" />
       <Button layoutX="743.0" layoutY="275.0" mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #0C9EE9;" text="Clear" />
+      <Button layoutX="743.0" layoutY="327.0" mnemonicParsing="false" onAction="#next" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #DA0CBA;" text="Next" />
    </children>
 </AnchorPane>
