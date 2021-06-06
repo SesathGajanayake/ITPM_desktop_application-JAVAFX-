@@ -25,7 +25,7 @@
          <TableColumn fx:id="evaluationhrsTable" prefWidth="101.60003662109375" text="Evaluation hours" />
         </columns>
     </TableView>
-   <Text layoutX="57.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mange subjects ">
+   <Text layoutX="57.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage subjects ">
       <font>
          <Font name="System Bold" size="18.0" />
       </font>
@@ -51,6 +51,7 @@
    <Text layoutX="57.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
    <TextField fx:id="idChoice" layoutX="192.0" layoutY="356.0" />
    <Button layoutX="480.0" layoutY="59.0" mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: #0C9EE9;" text="Clear" />
+   <Button layoutX="784.0" layoutY="58.0" mnemonicParsing="false" onAction="#next" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #DA0CBA;" text="Next" />
   
 
 

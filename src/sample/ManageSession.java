@@ -6,15 +6,20 @@ import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
@@ -84,11 +89,6 @@ public class ManageSession implements Initializable {
     @FXML
     private TextField searchbar;
 
-
-    @FXML
-    void addsessionbtnaction(ActionEvent event) {
-
-    }
 
 
     String query =null;
@@ -293,6 +293,22 @@ public class ManageSession implements Initializable {
         }
 
     }
+
+
+    @FXML
+    void addsessionbtnaction(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("lectureSession.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage =new Stage();
+        stage.setScene(scene);
+        stage.show();
+
+
+    }
+
+
+
 
 
 }

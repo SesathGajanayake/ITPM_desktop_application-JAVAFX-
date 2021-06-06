@@ -22,7 +22,7 @@
             <TableColumn fx:id="durationTable" prefWidth="101.60001220703123" text="Duration" />
         </columns>
       </TableView>
-      <TextField fx:id="searchbar" layoutX="58.0" layoutY="107.0" prefHeight="30.0" prefWidth="277.0" promptText="Search">
+      <TextField fx:id="searchbar" layoutX="58.0" layoutY="107.0" prefHeight="30.0" prefWidth="369.0" promptText="Search">
          <font>
             <Font size="14.0" />
          </font></TextField>
@@ -31,7 +31,6 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <Button fx:id="searchbtn" layoutX="482.0" layoutY="107.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" text="Search" />
       <Button fx:id="addSessionBtn" layoutX="604.0" layoutY="105.0" mnemonicParsing="false" onAction="#addsessionbtnaction" prefHeight="30.0" prefWidth="198.0" style="-fx-background-color: #0CDA4F;" text="Add session">
          <font>
             <Font name="System Bold" size="14.0" />

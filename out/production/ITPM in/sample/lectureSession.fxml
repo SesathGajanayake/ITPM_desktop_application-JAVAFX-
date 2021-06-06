@@ -37,8 +37,8 @@
          </font>
       </Text>
       <TextField fx:id="sessionSelectLec" layoutX="180.0" layoutY="228.0" />
-      <Button layoutX="420.0" layoutY="566.0" mnemonicParsing="false" onAction="#nextbtnSave" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #0CE9A5;" text="Submit" />
-      <Button fx:id="clearbtn" layoutX="551.0" layoutY="566.0" mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: #0C9EE9;" text="Clear" />
+      <Button layoutX="353.0" layoutY="566.0" mnemonicParsing="false" onAction="#nextbtnSave" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #0CE9A5;" text="Submit" />
+      <Button fx:id="clearbtn" layoutX="492.0" layoutY="566.0" mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: #0C9EE9;" text="Clear" />
       <Text layoutX="372.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select tags" wrappingWidth="81.03945922851562">
          <font>
             <Font size="14.0" />
@@ -85,5 +85,6 @@
             <Font size="14.0" />
          </font>
       </Text>
+      <Button layoutX="589.0" layoutY="567.0" mnemonicParsing="false" onAction="#next" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #DA0CBA;" text="Next" />
    </children>
 </AnchorPane>
