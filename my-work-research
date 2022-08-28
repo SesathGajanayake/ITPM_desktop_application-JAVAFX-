@@ -1,0 +1,86 @@
+
+////work --1
+
+public class LambdaClass {
+	
+	@FunctionalInterface
+	interface IProducerThread{
+		public void ProducerThread(ArrayList<Integer> list);
+	}
+	
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> list = null;
+		
+		new Thread(
+				
+				//producer thread using lambda expression
+				() -> {
+					
+					int value = 0;
+					
+					System.out.println("Producer started");
+					
+					try{
+						
+						value +=10;
+						list.add(value);
+						System.out.println("Producer adding value = " + value + " to queue");
+						list.wait();
+						Thread.sleep(1000);
+						
+					}catch (InterruptedException e){
+						e.printStackTrace();
+					}
+					
+					list.notify();
+					System.out.println("Elements in queue = " + list);
+				})
+					
+						.start();
+	}
+
+}
+
+//// work---- 2 
+class consumer {
+	
+	static ArrayList<Integer> list;
+	
+	public consumer(ArrayList<Integer>list) {
+		this.list = list;
+	}
+	
+	public static void run2 () {
+		synchronized (list) {
+			int value = 0; 
+			while (true) {
+				System.out.println("consumer started");
+				try {
+				value += 10;
+				list.add(value);
+				System.out.println("consumer thread consume" +value+ "values from the queue");
+					list.wait();
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				list.notify();
+				System.out.println("consumer Done = "+list);
+			  }
+			}
+		}	
+}
+
+public class lambdamethod2 {
+
+	public static void main (String[] args) {
+	
+		Runnable pr = producer::run1;
+		Runnable cs = consumer::run2;
+		cs.run();
+		pr.run();		
+		};
+	}
+
+
