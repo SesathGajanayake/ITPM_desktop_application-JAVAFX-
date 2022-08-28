@@ -1,0 +1,50 @@
+package com.lambda;
+
+@FunctionalInterface
+interface Cab {
+//	void bookCab()
+//	void bookCab(String source , String destination); <- without return types
+	double bookCab(String source , String destination); // <- with return types
+	
+}
+
+//class UberX implements Cab {
+//	public void bookCab() {
+//		System.out.println("UberX is arrived");
+//	}
+//
+//}
+
+public class lambdapp {
+
+	public static void main(String[] args) {
+
+		//1st way
+		//Cab cab = new UberX();
+		//cab.bookCab(); // <- this is a polymorphic statement
+	
+		//2nd way and Anonymous class implementation
+//	    Cab cab = new Cab() {
+//		@Override
+//		public void bookCab() {
+//			// TODO Auto-generated method stub
+//			System.out.println("UberX is arrived");
+//		}
+//	};
+//	
+//	cab.bookCab();
+  
+	//3rd way is using lamabda expression here
+		Cab cab = (source, destination )->{
+			System.out.println("UberX is arrived from " +source+ " to " +destination);
+			return 750.00;
+		};
+		
+		
+		double fare = cab.bookCab("Colombo" , "Kelaniya");	
+		System.out.println("Fare will be " +fare);
+	
+	}
+	
+}
+
