@@ -84,3 +84,66 @@ public class lambdamethod2 {
 	}
 
 
+public class work 3 {
+
+		 public static void main(String[] args) {       
+	       
+			        ArrayList<Integer> list = new ArrayList();
+			        
+			        
+			        Runnable r1 = () -> {
+			            
+			            synchronized (list) {
+			                int value = 0;
+			                while (true) {
+			                    System.out.println("Producer started");
+			                    try {
+			                        value +=10;
+			                        list.add(value);
+			                        System.out.println("Producer adding value = " +value +" to Queue");
+			                                
+			                        list.wait();
+			                        Thread.sleep(1000);
+			                        
+			                        
+			                    }catch (InterruptedException e) {
+			                        e.printStackTrace();
+			                    }
+			                    list.notify();
+			                    System.out.println("Elements in Queue = " + list);
+			                
+			            }}
+			        };new Thread(r1).start();
+			        
+			        
+			        
+			        Runnable r2 = () -> {
+			            
+			            synchronized (list) {
+			                int value = 0;
+			                while (true) {
+			                    System.out.println("Consumer started");
+			                    try {
+			                        value +=10;
+			                        list.remove(Integer.valueOf(value));
+			                        System.out.println("Consumer consume value = " +value +" to Queue");
+			                        
+			                        list.notify();
+			                        list.wait();
+			                        Thread.sleep(1000);
+			                    }catch (InterruptedException e) {
+			                        e.printStackTrace();
+			                    }
+			                }    
+			                    
+			                }
+			            };new Thread(r2).start();
+			        
+			        
+			    }
+			    
+	}
+
+
+
+
