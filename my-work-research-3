@@ -1,0 +1,85 @@
+package producerconsumermultithreads;
+
+
+import java.io.File;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.TransformerFactoryConfigurationError;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Attr;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+public class Main {
+	
+	//Create XML Instance of Document Builder
+	public Document buildDocument() throws ParserConfigurationException{
+		return DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
+		
+	}
+	
+	//Create Element
+	public Element CreateElement(Document doc, String Elementname) {
+		return doc.createElement(Elementname);
+	}
+	
+	//Create Attribute
+	public Attr CreateAttribute(Document doc, String type, String value) {
+		Attr attribute = doc.createAttribute(type);
+		attribute.setValue(value);
+		return attribute;
+	}
+	
+	//Add name to element
+	public Element appendTextNode(Document doc, Element element, String textNode) {
+		element.appendChild(doc.createTextNode(textNode));
+		return element;
+	}
+	
+	//Add attributes to Element
+	public Element setAttributeForElement(Element element, Attr attribute) {
+		element.setAttributeNode(attribute);
+		return element;
+	}
+	
+	//Transform response to XML
+	public void transformToXML(Document doc) throws TransformerFactoryConfigurationError, TransformerException{
+		
+			Transformer transformer = TransformerFactory.newInstance().newTransformer();
+			DOMSource source = new DOMSource(doc);
+			transformer.transform(source, new StreamResult(new File("student.xml")));
+			transformer.transform(source, new StreamResult(System.out));
+			
+	}
+	
+	public void buildXMLfile() throws ParserConfigurationException,TransformerFactoryConfigurationError,TransformerException{
+		
+		Document doc = buildDocument();
+		Element Employees = setAttributeForElement(
+			CreateElement(doc, "Employee"),
+			CreateAttribute(doc, "Gender", "Male"));
+		Employees.appendChild(appendTextNode(doc, setAttributeForElement(CreateElement(doc, "Name"), 
+				CreateAttribute(doc, "Initials", "S.A")),
+				"Nalaka Dissanayake"));
+		Employees.appendChild(appendTextNode(doc, setAttributeForElement(CreateElement(doc, "Address No"), 
+				CreateAttribute(doc, "115/1", "Avenue Street")),
+				"No:115/1, Avenue Street, Kandy"));
+		
+		
+		doc.appendChild(CreateElement(doc, "School")).appendChild(doc.appendChild(CreateElement(doc, "Students")).appendChild(Employees));
+		transformToXML(doc);
+		
+	}
+		
+	
+	public static void main (String args[]) {
+		 
+		
+	}
+}
